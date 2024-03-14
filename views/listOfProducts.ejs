@@ -1,0 +1,38 @@
+<%- include('header') %>
+<div class="container-table">
+        <div class="table">
+            <% if (products != '') { %>
+            <table>
+                <thead>
+                        <tr>
+                            <th>index</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Phone number</th>
+                            <th>Available</th>
+                            <th>Action</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <% products.forEach((row, index) => {   %>
+                            <tr>
+                                <td><%= index %></td>
+                                <td><%= row.name %></td>
+                                <td><%= row.description %></td>
+                                <td><%= row.phoneNumber %></td>
+                                <td><%= row.available %></td>
+                                <td>
+                                    <a href="/remove/<%= row.id %>"><button>delete</button></a>    
+                                </td>
+                            </tr>
+                    <% })%>
+                </tbody>
+            </table>
+            <% } else {%>  
+                <h1>
+                    No Products are available.
+                </h1>      
+            <% }%>
+    </div>
+</div>
+<%-include('buttom') %>

@@ -1,0 +1,30 @@
+<%- include('header') %>
+    <div class="container">
+        <div class="">
+            <h1>
+                Create Product
+            </h1>
+            <form action="/createProduct" method="post" id="add_form">
+                <div class="Additems">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" placeholder="Product name" required/>
+                </div>
+                <div class="Additems">
+                    <label for="description">Description</label>
+                    <textarea type="text" name="description" placeholder="Description" required></textarea>
+                </div>
+                <div class="Additems">
+                    <label for="phone">Phone number</label>
+                    <input type="text" name="phoneNumber" pattern="[0-9]{9}" maxlength="9" placeholder="XX-XXX-XX-XX" required/>
+                </div>
+                <div class="Additems">
+                    <label for="Available">Available</label>
+                    <input type="text" name="available" pattern="[Yy]es|[Nn]o" placeholder="Yes / No" required/>
+                </div>
+                <div class="Additems">
+                    <input type="submit" name="submit" id=""/>
+                </div>
+            </form>
+        </div>
+</div>
+<%-include('buttom') %>
